@@ -28,7 +28,7 @@ nmap -sS -sV -p 1-65535 -iL targets.txt -oX nmap-output.xml
 ## Usage
 
 ```bash
-/auto-sslscan.py 
+./auto-sslscan.py 
 auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )
 
 USAGE: auto-sslscan.py [nmap-ouput.xml] [output-file]
@@ -51,7 +51,8 @@ SSL services list saved to: ssl-services.txt
 The output from the script is concatenated file (see below)
 
 ```bash
-# cat outfile.txt 
+cat outfile.txt 
+
 ====================================================================
 auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )
 ====================================================================
