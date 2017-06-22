@@ -21,8 +21,8 @@ The only pre-reqs are:
 The Nmap XML file must have been created with version scanning enabled i.e. via Nmap flags `-sV` or `-A` (see below) 
 
 ```bash
-nmap -A -p 443 -iL targets.txt -oX nmap-output.xml 
-nmap -sS -sV -p 443 -iL targets.txt -oX nmap-output.xml
+nmap -A -p 1-65535 -iL targets.txt -oX nmap-output.xml 
+nmap -sS -sV -p 1-65535 -iL targets.txt -oX nmap-output.xml
 ```
 
 ## Usage
