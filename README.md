@@ -45,3 +45,39 @@ Performing sslscan of 199.101.100.186:443
 sslscan results saved to: outfile.txt
 SSL services list saved to: ssl-services.txt
 ```
+
+### Output / Results
+
+The output from the script is concatenated file (see below)
+
+```bash
+# cat outfile.txt 
+====================================================================
+auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )
+====================================================================
+
+Version: 1.11.10-static
+OpenSSL 1.0.2-chacha (1.0.2g-dev)
+
+Testing SSL server 185.176.90.16 on port 443 using SNI name 
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLS 1.2 not vulnerable to heartbleed
+TLS 1.1 not vulnerable to heartbleed
+TLS 1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+---snip---
+```
