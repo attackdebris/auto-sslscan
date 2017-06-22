@@ -5,20 +5,20 @@ Auto-sslscan is a python script designed to automate the process of conducting s
 The Auto-sslscan script parses an nmap.xml output file, extracts all SSL services and automatically performs an sslscan of them.
 
 
-## Install
+## Installation
 
-git clone https://github.com/attackdebris/auto-sslscan
+git clone https://github.com/attackdebris/auto-sslscan.git
 
 ### Prerequisites 
 
 The only pre-reqs are:
 
-You must have sslscan installed and in your path (default in Kali)
-You need a valid nmap xml output file
+1. You must have sslscan installed and in your path (default in Kali)
+2. You need a valid Nmap XML output file (see below)
 
 ### Nmap XML File
 
-Nmap version scanning, via -sV or -A, must have been enabled to create your input nmap XML file e.g.:
+The Nmap XML file must have been created with version scanning enabled i.e. via Nmap flags `-sV` or `-A` (see below) 
 
 ```bash
 nmap -A -p 443 -iL targets.txt -oX nmap-output.xml 
@@ -45,4 +45,3 @@ Performing sslscan of 199.101.100.186:443
 sslscan results saved to: outfile.txt
 SSL services list saved to: ssl-services.txt
 ```
- 
