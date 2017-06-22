@@ -36,7 +36,7 @@ USAGE: auto-sslscan.py [nmap-ouput.xml] [output-file]
 
 ### Example
 ```bash
-./auto-sslscan.py attackdebris.xml outfile.txt
+./auto-sslscan.py nmap-output.xml outfile.txt
 auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )
 
 Performing sslscan of 185.176.90.16:443
