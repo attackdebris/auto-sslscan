@@ -40,7 +40,7 @@ USAGE: auto-sslscan.py [nmap-ouput.xml] [output-file]
 auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )
 
 Performing sslscan of 185.176.90.16:443
-Performing sslscan of 199.101.100.186:443
+Performing sslscan of 199.101.100.186:31337
 
 sslscan results saved to: outfile.txt
 SSL services list saved to: ssl-services.txt
