@@ -86,4 +86,4 @@ Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
 
 ### Credit
 
-Thse base code I used to create this: https://github.com/DanMcInerney/nmap-parser/blob/master/nmap-parser.py
+The base code I used to create this: https://github.com/DanMcInerney/nmap-parser/blob/master/nmap-parser.py
