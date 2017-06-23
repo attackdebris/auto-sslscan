@@ -7,7 +7,6 @@
 # Base code credit: https://github.com/DanMcInerney/nmap-parser/blob/master/nmap-parser.py 
 #
 
-import argparse
 import os
 import subprocess
 import sys
@@ -39,11 +38,6 @@ elif len(sys.argv) ==3:
 	f.close
 	print "auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )\n"
 
-def parse_args():
-	parser = argparse.ArgumentParser()
-	parser.add_argument(sys.argv[1])
-	return parser.parse_args()
-
 def report_parser(report):
     ''' Parse the Nmap XML report '''
     for host in report.hosts:
@@ -74,7 +68,7 @@ def print_data(ip, port, tunnel):
 		f.close
 
 		f = open(myfile, 'a+')	
-		subprocess.call(["sslscan", "--no-failed", "--targets="+temp], stdout=f)
+		subprocess.call(["sslscan", "--ssl2", "--no-failed", "--targets="+temp], stdout=f)
 		f.close
 def end():
 		print "\nsslscan results saved to: {}".format(myfile)
