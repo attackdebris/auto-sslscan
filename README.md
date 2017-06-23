@@ -11,10 +11,11 @@ git clone https://github.com/attackdebris/auto-sslscan.git
 
 ### Prerequisites 
 
-The only pre-reqs are:
+The pre-reqs are:
 
-1. You must have sslscan installed and in your path (default in Kali)
-2. You need a valid Nmap XML output file (see below)
+1. Python (tested on Python 2.7) 
+2. You must have sslscan installed and in your path (default in Kali)
+3. You need a valid Nmap XML output file (see below)
 
 ### Nmap XML File
 
@@ -48,7 +49,7 @@ SSL services list saved to: ssl-services.txt
 
 ### Output / Results
 
-The output from the script is concatenated file (see below)
+The output from the script is a concatenated file (see below)
 
 ```bash
 cat outfile.txt 
@@ -82,3 +83,7 @@ Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
 Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
 ---snip---
 ```
+
+### Credit
+
+Thse base code I used to create this: https://github.com/DanMcInerney/nmap-parser/blob/master/nmap-parser.py
