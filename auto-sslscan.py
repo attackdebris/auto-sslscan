@@ -68,7 +68,7 @@ def print_data(ip, port, tunnel):
 		f.close
 
 		f = open(myfile, 'a+')	
-		subprocess.call(["sslscan", "--ssl2", "--no-failed", "--targets="+temp], stdout=f)
+		subprocess.call(["sslscan", "--no-failed", "--targets="+temp], stdout=f)
 		f.close
 def end():
 		print "\nsslscan results saved to: {}".format(myfile)
