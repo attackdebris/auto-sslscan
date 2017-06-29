@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# auto-sslscan.py version 0.1
+# auto-sslscan.py version 0.2
 #
 # https://github.com/attackdebris/auto-sslscan
 #
@@ -27,16 +27,16 @@ elif len(sys.argv) ==3:
 	myfile = sys.argv[2]
 	f = open(myfile, 'w')
 	print >> f, "===================================================================="
-	print >> f, "auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )"
+	print >> f, "auto-sslscan - v0.2 ( https://github.com/attackdebris/auto-sslscan )"
 	print >> f, "====================================================================\n"
 	f.close
 	temp = ".tmp-auto-sslscan"
-	sslservices = "ssl-services.txt"
+	sslservices = "ssl-services-"+nmapxml.translate(None, '.xml')+".txt"
 	f = open(temp, 'w')
 	f.close
 	f = open(sslservices, 'w')
 	f.close
-	print "auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )\n"
+	print "auto-sslscan - v0.2 ( https://github.com/attackdebris/auto-sslscan )\n"
 
 def report_parser(report):
     ''' Parse the Nmap XML report '''
