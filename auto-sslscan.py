@@ -13,7 +13,7 @@ import sys
 from libnmap.process import NmapProcess
 from libnmap.parser import NmapParser, NmapParserException
 
-instructions =  "auto-sslscan - v0.1 ( https://github.com/attackdebris/auto-sslscan )\n" +\
+instructions =  "auto-sslscan - v0.2 ( https://github.com/attackdebris/auto-sslscan )\n" +\
                 "\nUSAGE: auto-sslscan.py [nmap-ouput.xml] [output-file]" 
 
 if len(sys.argv) <3 or sys.argv[1] == "-h" or sys.argv[1] == "--h" or sys.argv[1] == "-help" or sys.argv[1] == "--help":
