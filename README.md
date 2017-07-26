@@ -16,6 +16,21 @@ The pre-reqs are:
 1. Python (tested on Python 2.7) 
 2. You must have sslscan installed and in your path (default in Kali)
 3. You need a valid Nmap XML output file (see below)
+4. You need python-libnmap (see below)
+
+### Installing python-libnmap
+
+You can install libnmap via pip:
+```bash
+pip install libnmap
+```
+
+or via git:
+```bash
+$ git clone https://github.com/savon-noir/python-libnmap.git
+$ cd python-libnmap
+$ python setup.py install
+```
 
 ### Nmap XML File
 
