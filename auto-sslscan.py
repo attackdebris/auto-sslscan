@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# auto-sslscan.py version 0.3
+# auto-sslscan.py version 0.4
 #
 # https://github.com/attackdebris/auto-sslscan
 #
@@ -13,7 +13,7 @@ import sys
 from libnmap.process import NmapProcess
 from libnmap.parser import NmapParser, NmapParserException
 
-instructions =  "auto-sslscan - v0.3 ( https://github.com/attackdebris/auto-sslscan )\n" +\
+instructions =  "auto-sslscan - v0.4 ( https://github.com/attackdebris/auto-sslscan )\n" +\
                 "\nUSAGE: auto-sslscan.py [nmap-ouput.xml] [output-file]" 
 
 if len(sys.argv) <3 or sys.argv[1] == "-h" or sys.argv[1] == "--h" or sys.argv[1] == "-help" or sys.argv[1] == "--help":
@@ -27,16 +27,16 @@ elif len(sys.argv) ==3:
 	myfile = sys.argv[2]
 	f = open(myfile, 'w')
 	print >> f, "===================================================================="
-	print >> f, "auto-sslscan - v0.3 ( https://github.com/attackdebris/auto-sslscan )"
+	print >> f, "auto-sslscan - v0.4 ( https://github.com/attackdebris/auto-sslscan )"
 	print >> f, "====================================================================\n"
 	f.close
 	temp = ".tmp-auto-sslscan"
-	sslservices = "ssl-services-"+(nmapxml.replace('/', '')).translate(None, '.xml')+".txt"
+	sslservices = myfile.replace('.txt', '')+"-ssl-services.txt"
 	f = open(temp, 'w')
 	f.close
 	f = open(sslservices, 'w')
 	f.close
-	print "auto-sslscan - v0.3 ( https://github.com/attackdebris/auto-sslscan )\n"
+	print "auto-sslscan - v0.4 ( https://github.com/attackdebris/auto-sslscan )\n"
 
 def report_parser(report):
     ''' Parse the Nmap XML report '''
